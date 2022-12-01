@@ -1,6 +1,7 @@
 import numpy as np
+import os
 import time
-from IPython.display import clear_output
+import keyboard
 class tablero:
     def __init__(self):
         self.valor = np.full([10,10], fill_value = "  ")
@@ -52,7 +53,7 @@ class jugador:
         if self.nombre == "Jugador1":
             for i in range(10):
                 self.lista_eslora = [4,3,3,2,2,2,1,1,1,1]
-                self.barcos.append(barco(self.lista_eslora[i], [[int(input("Introduce la coordenada Y del barco")),int(input("Introduce la coordenada X del barco"))]], input("Introduce la orientación del barco").upper(), self))
+                self.barcos.append(barco(self.lista_eslora[i], [[int(input("Introduce la coordenada Y del barco: ")),int(input("Introduce la coordenada X del barco: "))]], input("Introduce la orientación del barco['N', 'S', 'E', 'O']: ").upper(), self))
                 if ["No", "No"] in (i for x in self.barcos for i in x.posicion):
                     self.barcos.clear()
                     self.tablero_prop.limpiar()
@@ -60,7 +61,18 @@ class jugador:
                 self.colocar_barcos()
                 print("Barco", i + 1)
                 self.tablero_prop.mostrar()
-                clear_output(wait = True)
+                start = time.gmtime().tm_sec
+                rev = [3,2,1,0]
+                l = [1,2,3,4]
+                print("presione 'q' para saltar")
+                while len(l) != 0:
+                    if keyboard.is_pressed("q"):
+                        break
+                    end = time.gmtime().tm_sec - start
+                    if end in l:
+                        print(rev[end-1])
+                        l.remove(end)
+                os.system("cls")
         elif self.nombre == "Jugador2":
             for i in range (10):
                 self.lista_eslora = [4,3,3,2,2,2,1,1,1,1]
@@ -71,7 +83,7 @@ class jugador:
                     self.tablero_prop.limpiar()
                     return
                 self.colocar_barcos()
-                clear_output(wait = True)
+                # os.system("cls")
     def colocar_barcos(self):
         for bar in self.barcos:
             for posicion  in bar.posicion:
