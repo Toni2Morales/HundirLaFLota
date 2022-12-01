@@ -40,15 +40,15 @@
 
 ### Como se puede ver en la imagen de abajo, la tecla para saltarse el tiempo de espera es la "q".
 
-![Imagen1](/HundirLaFLota/Imagenes/1.PNG)
+![Imagen1](Imagenes/1.PNG)
 
 ### Después de Haber seleccionado tus barcos llega la hora de empezar a jugar. Ya que este juego es hecho a modo de demostracion los datos del tablero adversario se muestran en pantalla para terminar el juego facilmente. Cada vez que se acierta se vuelve a disparar( Esto ocurre tanto para el jugador como par la máquina). Hay simbolos especiales que muestran visualmente cuando no se ha acertado a un barco, cuando se le ha acertado y cuando se le ha Hundido.
 
-![Imagen1](/HundirLaFLota/Imagenes/2.PNG)
+![Imagen1](Imagenes/2.PNG)
 
 ### Al final de la partida se indica el ganador y el perdedor junto a sus tableros y los ataques que han hecho.
 
-![Imagen1](/HundirLaFLota/Imagenes/3.PNG)
+![Imagen1](Imagenes/3.PNG)
 
 
 
