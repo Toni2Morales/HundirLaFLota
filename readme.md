@@ -1,4 +1,3 @@
-# Hundir la flota
 # **Hundir la flota**
 ## En este proyecto he recreado el clásico juego de Hundir la Flota programándolo completamente en Python.
 
